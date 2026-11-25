@@ -1,88 +1,118 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#234e8b">
-  <meta name="description" content="A study of upper extremity trauma case volume and estimated KSA readiness at Brooke Army Medical Center, 2014–2025.">
-  <title>Avoiding the Walker Dip — Upper Extremity Trauma Readiness</title>
-  <style>
-    :root{--navy:#234e8b;--deep:#183d72;--ink:#172437;--muted:#526276;--line:#dce3ed;--paper:#f4f6f9;--white:#fff;--blue:#3c6fb0;--red:#ef462e;--gold:#f4c84a;--serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.58 var(--serif)}a{color:var(--navy);text-underline-offset:3px}.wrap{width:min(1510px,calc(100% - 48px));margin:0 auto}.eyebrow,.label,.section-title,.metric-label,.chart-title,.affiliations{font-family:var(--sans)}
-    .topline{height:50px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font:700 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#405675}.topline span:last-child{letter-spacing:.04em;color:#65748a}
-    .hero{background:var(--navy);color:#fff;border-bottom:5px solid var(--gold)}.hero-inner{min-height:245px;display:grid;grid-template-columns:122px minmax(0,1fr) 122px;gap:32px;align-items:center;padding:30px 0}.seal{width:116px;height:116px;object-fit:contain;background:#fff;border-radius:50%;padding:5px}.crest{width:108px;height:128px;object-fit:contain;background:#fff;padding:4px}.hero-copy{text-align:center;max-width:960px;margin:auto}.eyebrow{margin:0 0 12px;color:#e3ecfa;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.hero h1{max-width:900px;margin:0 auto 16px;font:700 clamp(29px,3.1vw,48px)/1.12 var(--serif);letter-spacing:-.025em}.authors{margin:0 auto 9px;font:700 14px/1.5 var(--serif)}.affiliations{margin:0;color:#dbe5f3;font-size:12px;line-height:1.55}.affiliations sup{padding-right:3px}
-    .anchorbar{background:#fff;border-bottom:1px solid var(--line)}.anchorbar .wrap{display:flex;gap:24px;overflow:auto;padding:13px 0;font:700 12px/1.2 var(--sans);white-space:nowrap}.anchorbar a{color:#334b6d;text-decoration:none}.anchorbar a:hover{text-decoration:underline}
-    main{padding:30px 0 44px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}.metric{background:#fff;border:1px solid var(--line);border-top:3px solid var(--navy);padding:16px 20px 17px}.metric strong{display:block;font:700 30px/1.05 var(--sans);color:var(--navy)}.metric-label{display:block;margin-top:7px;color:#53647b;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
-    .poster-grid{display:grid;grid-template-columns:1.02fr 1.04fr 1fr;gap:22px;align-items:start}.column{display:grid;gap:20px;min-width:0}.panel{background:#fff;border:1px solid var(--line);padding:0 20px 20px;box-shadow:0 1px 2px rgba(16,37,68,.04);scroll-margin-top:20px}.section-title{margin:0 -20px 15px;padding:11px 16px;background:var(--navy);color:#fff;text-align:center;font-size:13px;line-height:1.25;font-weight:700;letter-spacing:.035em;text-transform:uppercase}.panel p{margin:0 0 12px}.panel p:last-child{margin-bottom:0}.panel ul{margin:0;padding-left:20px}.panel li{padding-left:2px;margin:0 0 9px}.panel li:last-child{margin-bottom:0}.panel strong{font-weight:700}.subhead{margin:17px 0 8px;font:700 15px/1.35 var(--serif);color:var(--deep)}.method-list li{margin-bottom:10px}.ksa-list{list-style:none;padding:0!important}.ksa-list li{border-left:3px solid var(--gold);padding:7px 0 7px 12px;margin:0 0 4px}.tier{font:700 12px var(--sans);color:var(--navy);letter-spacing:.05em}
-    .result-note{border-left:4px solid var(--gold);padding:10px 14px;background:#f7f9fc;margin:14px 0 0!important}.chart-wrap{padding:12px 10px 8px;border:1px solid #e7ebf1;margin-top:14px;background:#fff}.chart-title{margin:0 0 7px;text-align:center;color:#4e5e72;font-size:11px;font-weight:700;letter-spacing:.04em}.chart{display:block;width:100%;height:auto;overflow:visible}.chart svg{display:block;width:100%;height:auto}.legend{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 16px;margin:8px 0 0;font:11px/1.3 var(--sans);color:#425269}.legend span{display:inline-flex;align-items:center;gap:6px}.swatch{width:10px;height:10px;border-radius:2px}.chart-foot{margin:8px 0 0!important;text-align:center;color:#6b7789;font:11px/1.4 var(--sans)}.discussion-lead{font-size:17px;line-height:1.45;color:var(--deep)}.references{padding-left:19px;font-size:13px;line-height:1.45}.references li{padding-left:2px;margin-bottom:9px}.references li:last-child{margin-bottom:0}.disclaimer{font-size:12px;line-height:1.45;color:#5b6777}footer{padding:16px 0 28px;border-top:1px solid var(--line);color:#65748a;font:12px/1.5 var(--sans)}
-    .print-button{margin-left:auto;border:1px solid #d4ddeb;border-radius:3px;padding:7px 11px;background:var(--navy);color:#fff;font:700 12px/1.2 var(--sans);cursor:pointer}.print-button:hover{background:var(--deep)}.print-button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-    @media(max-width:1050px){.poster-grid{grid-template-columns:1fr 1fr}.poster-grid .column:last-child{grid-column:1/-1;grid-template-columns:1fr 1fr;align-items:start}.hero-inner{grid-template-columns:96px 1fr 96px;gap:20px}.seal{width:92px;height:92px}.crest{width:88px;height:108px}}
-    @media(max-width:680px){.wrap{width:min(100% - 28px,520px)}.topline{height:44px;font-size:10px;letter-spacing:.08em}.topline span:last-child{font-size:10px}.hero-inner{grid-template-columns:1fr;gap:13px;padding:22px 0 24px}.seal,.crest{display:none}.hero h1{font-size:32px}.eyebrow{font-size:10px}.authors{font-size:13px}.affiliations{font-size:11px}.anchorbar .wrap{gap:19px;padding:12px 0}.anchorbar a{font-size:11px}main{padding:18px 0 30px}.metrics{gap:8px;margin-bottom:16px}.metric{padding:12px 10px}.metric strong{font-size:23px}.metric-label{font-size:10px;line-height:1.35}.poster-grid{grid-template-columns:1fr;gap:15px}.poster-grid .column:last-child{grid-column:auto;grid-template-columns:1fr}.column{gap:15px}.panel{padding:0 16px 17px}.section-title{margin:0 -16px 13px;font-size:12px}.panel p,.panel li{font-size:15px}.references{font-size:12px}}
-    @page{size:45in 22in;margin:0}
-    @media print{html,body{width:45in;height:22in;margin:0;padding:0;background:#fff}body{font-size:12pt;line-height:1.34;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{width:43.8in;max-width:none;margin-left:auto;margin-right:auto}.topline,.anchorbar,footer{display:none}.hero{width:45in;height:2.65in;border-bottom:.08in solid var(--gold);overflow:hidden}.hero-inner{width:43.8in;max-width:none;height:100%;min-height:0;grid-template-columns:1.65in minmax(0,1fr) 1.65in;gap:.18in;padding:.12in 0}.seal{width:1.42in;height:1.42in;padding:.05in}.crest{width:1.28in;height:1.58in;padding:.04in}.hero-copy{max-width:none}.eyebrow{font-size:11pt;margin:0 0 .06in}.hero h1{max-width:37in;font-size:30pt;line-height:1.04;margin:0 auto .08in}.authors{font-size:13pt;margin:0 auto .04in}.affiliations{font-size:10pt;line-height:1.28}main{padding:.15in 0 .05in}.metrics{gap:.12in;margin:0 0 .15in}.metric{padding:.09in .17in .10in;border-top-width:.04in}.metric strong{font-size:21pt}.metric-label{font-size:9pt;margin-top:.04in}.poster-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:.18in}.column{gap:.14in}.panel{padding:0 .15in .12in;box-shadow:none;break-inside:avoid}.section-title{margin:0 -.15in .10in;padding:.075in .12in;font-size:10.5pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}.panel p,.panel li{font-size:11pt;line-height:1.27}.panel li{margin-bottom:.055in}.subhead{font-size:11.5pt;margin:.11in 0 .045in}.ksa-list li{padding:.035in 0 .035in .09in}.tier{font-size:8.5pt}.result-note{padding:.055in .09in}.chart-wrap{margin-top:.10in;padding:.065in .065in .035in}.chart-title{font-size:8.5pt}.legend,.chart-foot{font-size:8pt}.discussion-lead{font-size:12pt;line-height:1.32}.references{font-size:8.2pt;line-height:1.21}.references li{margin-bottom:.045in}.disclaimer{font-size:8pt;line-height:1.25}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2f5496">
+<title>Treatment of Civilian Upper Extremity Trauma Patients — Avoiding the Walker Dip</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#fff;color:#111}
+body{font-family:"Times New Roman",Times,serif}
+.poster{position:relative;container-type:inline-size;width:min(100vw,45in);aspect-ratio:45/22;margin:0 auto;background:#fff;overflow:hidden;color:#111}
+.banner{position:static;height:auto;background:none;color:white}.banner::before{content:"";position:absolute;inset:0 0 auto;height:15.9091%;background:#2f5496}
+.logo-dha{position:absolute;left:2.6422%;top:.8318%;width:6.8667%;height:14.0455%;object-fit:contain}
+.logo-crest{position:absolute;left:91.5022%;top:0;width:6.2156%;height:15.9091%;object-fit:fill;background:white}
+.title{position:absolute;left:24.9156%;top:1.7364%;width:50.1711%;height:7.8045%;display:flex;align-items:flex-start;justify-content:center;text-align:center;font-size:1.4815cqw;font-weight:bold;line-height:1.02;color:#fff}
+.byline{position:absolute;left:29%;top:10.4045%;width:42.0156%;height:5.05%;text-align:center;color:#fff;font-size:.7407cqw;line-height:1.02}
+.authors{margin:0 0 .12cqw}.affil{margin:0;font-size:.5556cqw;line-height:1.05}
+.band{position:absolute;margin:0;background:#2f5496;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.6173cqw;font-weight:bold;line-height:1.05}
+.band-bg{left:2.2222%;top:18.1818%;width:31.1111%;height:4.5455%}
+.band-results{left:35%;top:18.1818%;width:30%;height:4.5455%}
+.band-discussion{left:66.6667%;top:18.1818%;width:31.1111%;height:4.5455%}
+.band-methods{left:2.2222%;top:69.9545%;width:31.1111%;height:4.5455%}
+.band-refs{left:66.6889%;top:75.2273%;width:31.1111%;height:4.5455%}
+.band-bg span{width:31.73%;}.band-discussion span{width:13.62%}.band-results span{width:10.23%}.band-methods span{width:12.75%}
+.copy{position:absolute;margin:0;padding:0;font-size:.6173cqw;line-height:1.19;font-weight:normal;color:#111}
+.copy ul{margin:0;padding-left:1.15em}.copy li{padding-left:.08em;margin:0 0 .24em}.copy p{margin:0 0 .26em}.intro{left:2.2222%;top:22.8182%;width:31.1111%;height:47.0455%}
+.methods{left:2.2222%;top:74.3182%;width:31.1111%;height:25.6818%}
+.ksa{left:35.0667%;top:22.9545%;width:29.9333%;height:25%;font-size:.6173cqw;line-height:1.34}
+.discuss-top{left:66.7333%;top:22.6818%;width:31.0444%;height:19.4091%;font-size:.7407cqw;line-height:1.28}
+.strategic-title{position:absolute;left:66.6667%;top:41.7273%;width:31.0444%;height:2.8636%;margin:0;text-align:center;font-size:.7407cqw;font-weight:bold;line-height:1.05}
+.discuss-body{left:66.7556%;top:44.7273%;width:31.0444%;height:30.4091%;font-size:.7407cqw;line-height:1.27}
+.references{left:66.5778%;top:80.3636%;width:31.3556%;height:19.6364%;font-size:.4938cqw;line-height:1.22}
+.references p{margin:0 0 .10em}
+.disclaimer{position:absolute;left:66.7556%;top:97.0909%;width:31.1778%;height:2.9091%;font-size:.4938cqw;line-height:1.18;text-align:center;margin:0}
+.chart{position:absolute;background:#fff}
+.chart-volume{left:37%;top:45.2273%;width:25.9778%;height:26.1818%}
+.chart-ksa{left:36.7333%;top:71.3182%;width:26.5111%;height:28.1364%}
+.chart svg{display:block;width:100%;height:100%}
+@page{size:45in 22in;margin:0}
+@media print{html,body{width:45in;height:22in;margin:0;padding:0;overflow:hidden}.poster{width:45in;height:22in;max-width:none;aspect-ratio:auto;margin:0;overflow:hidden;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media screen and (max-width:520px){.poster{width:100vw}}
+</style>
 </head>
 <body>
-  <div class="topline wrap"><span>Military Orthopaedic Trauma · Readiness</span><span>Poster size · 45 × 22 in</span></div>
-  <header class="hero"><div class="hero-inner wrap">
-    <img class="seal" src="assets/defense-health-agency.png" alt="Defense Health Agency seal">
-    <div class="hero-copy"><p class="eyebrow">Brooke Army Medical Center · Level I Trauma Center</p>
-      <h1>Treatment of Civilian Upper Extremity Trauma Patients at a Military Level One Trauma Center: Avoiding the “Walker Dip”</h1>
-      <p class="authors">CPT Raymond V. Spaulding, MD, MC, USA<sup>1</sup> · Capt Manuela Gaviria, MD, MS, MC, USAF<sup>2</sup> · Maj Casey M. Sabbag, MD, MS, MC, USAF<sup>2</sup></p>
-      <p class="affiliations"><sup>1</sup>296th BSB, 1-2 SBCT, 7th Infantry Division, Joint Base Lewis-McChord, WA<br><sup>2</sup>Department of Orthopaedic Surgery, Brooke Army Medical Center, Fort Sam Houston, TX</p>
-    </div><img class="crest" src="assets/dedication-duty-service.jpeg" alt="Dedication Duty Service military medical crest">
-  </div></header>
-  <nav class="anchorbar" aria-label="Page sections"><div class="wrap"><a href="#background">Background</a><a href="#methods">Methods</a><a href="#results">Results</a><a href="#discussion">Discussion</a><a href="#references">References</a><button class="print-button" type="button" onclick="window.print()">Print poster · 45 × 22 in</button></div></nav>
-  <main class="wrap">
-    <section class="metrics" aria-label="Study highlights"><div class="metric"><strong>7,706</strong><span class="metric-label">Upper extremity cases · 2014–2025</span></div><div class="metric"><strong>35,000</strong><span class="metric-label">KSA deployment readiness benchmark</span></div><div class="metric"><strong>11 / 11</strong><span class="metric-label">Years above benchmark in estimated KSA</span></div></section>
-    <div class="poster-grid">
-      <div class="column">
-        <section class="panel" id="background"><h2 class="section-title">Background / Introduction</h2><ul>
-          <li>The United States military has reached unprecedented survival rates during recent conflicts, largely due to surgical expertise developed in managing complex combat injuries.</li>
-          <li>During peacetime, this expertise often declines as case volume and complexity drop—a phenomenon known as <strong>the Walker Dip.</strong> With the possibility of near-peer conflicts, maintaining military surgeons’ operational readiness is critical.</li>
-          <li>Upper extremity orthopaedic trauma accounts for nearly 10% of all combat-related procedures in recent conflicts.</li>
-          <li>This study evaluates Brooke Army Medical Center’s ability to maintain readiness of its upper extremity surgeons as the Department of Defense’s only Level I trauma center.</li>
-          <li>The Knowledge, Skills, and Abilities (KSA) metric provides an objective readiness score that prioritizes case acuity and volume in assessing deployment preparedness.</li>
-        </ul><p class="result-note">The team also considers military–civilian partnerships and trauma center integration as ways to preserve deployment-ready surgical skills.</p></section>
-        <section class="panel" id="methods"><h2 class="section-title">Methods</h2><ul class="method-list">
-          <li>Analyzed surgical case logs for BAMC upper extremity orthopaedic surgeons from 2014 to 2025.</li><li>To account for deployments, retirements, and PCS turnover, individual monthly case volumes were extrapolated to standardized 12-month case volumes.</li><li>Applied the revised KSA metric using a conservative estimated case mix of 10% Tier 1 and 90% Tier 4 cases.</li><li>Compared scores with the 35,000-point deployment readiness benchmark.</li>
-        </ul><h3 class="subhead">Revised KSA scoring system</h3><ul class="ksa-list">
-          <li><span class="tier">TIER 1 · AVG. 436</span><br>Open debridements, open fracture treatment, amputations, fasciotomies, and external fixation.</li><li><span class="tier">TIER 2 · AVG. 373</span><br>Soft tissue, hand, spine, and foot procedures; arthroplasties and major tumor resection.</li><li><span class="tier">TIER 3 · 235</span><br>Arthroscopy.</li><li><span class="tier">TIER 4 · AVG. 161</span><br>Closed fracture treatment, hardware removal, and other procedures not included above.</li>
-        </ul></section>
-      </div>
-      <div class="column"><section class="panel" id="results"><h2 class="section-title">Results</h2>
-        <p>Across 2014–2025, BAMC upper extremity surgeons performed <strong>7,706 cases.</strong> Estimated annual KSA scores exceeded the deployment readiness benchmark in every study year.</p>
-        <div class="chart-wrap"><p class="chart-title">Annual upper extremity procedure volume</p><div id="volume-chart" class="chart" role="img" aria-label="Bar chart showing total cases and average cases per surgeon from 2014–2015 through 2024–2025"></div><div class="legend"><span><i class="swatch" style="background:#ef462e"></i>Average per surgeon</span><span><i class="swatch" style="background:#3c6fb0"></i>Total cases</span></div><p class="chart-foot">Annual periods shown in the source poster.</p></div>
-        <div class="chart-wrap"><p class="chart-title">Estimated annual KSA score per surgeon</p><div id="ksa-chart" class="chart" role="img" aria-label="Bar chart of estimated annual KSA scores per surgeon, with a red line marking the 35,000-point benchmark"></div><div class="legend"><span><i class="swatch" style="background:#3c6fb0"></i>Estimated KSA score</span><span><i class="swatch" style="background:#ef462e"></i>35,000-point benchmark</span></div><p class="chart-foot">Case mix estimate: 10% Tier 1, 90% Tier 4.</p></div>
-        <p class="result-note">With the conservative case-mix assumption, estimated scores ranged from <strong>35,937 to 53,148</strong> KSA points per surgeon annually.</p>
-      </section></div>
-      <div class="column">
-        <section class="panel" id="discussion"><h2 class="section-title">Discussion</h2><p class="discussion-lead">BAMC likely exceeded the KSA deployment readiness benchmark for upper extremity surgeons each year from 2014 through 2025.</p><ul>
-          <li>The conservative 10% Tier 1 / 90% Tier 4 estimate still places annual scores above 35,000 KSA points.</li><li>These findings highlight the role of high-acuity trauma exposure in preserving surgical capability and avoiding the Walker Dip.</li>
-        </ul><h3 class="subhead">Strategic imperative: expand access to trauma exposure</h3><ul>
-          <li>Many military treatment facilities may not reach this level of acuity and volume and could fall short of the readiness benchmark.</li><li>Transforming more facilities into Level I trauma centers is likely not feasible. A more scalable approach is embedding military orthopaedic surgeons in civilian Level I trauma centers, either through permanent assignments or targeted pre-deployment rotations.</li><li>Administrative hurdles remain. Expanding military–civilian trauma integration should be a DoD priority to preserve surgical skills.</li>
-        </ul><p class="result-note">The authors frame readiness as both a clinical and strategic necessity as the military prepares for future conflict.</p></section>
-        <section class="panel" id="references"><h2 class="section-title">References / Disclaimer</h2><ol class="references">
-          <li>Knudson MM. A Perfect Storm: 2019 Scudder Oration on Trauma. <em>J Am Coll Surg.</em> 2020;230(3):269–282. <a href="https://doi.org/10.1016/j.jamcollsurg.2019.11.009">doi:10.1016/j.jamcollsurg.2019.11.009</a></li>
-          <li>Hodgetts TJ, Naumann D, Bowley D. Transferable military medical lessons from the Russo-Ukraine war. <em>BMJ Mil Health.</em> 2025;171(2):101–104. <a href="https://doi.org/10.1136/military-2023-002435">doi:10.1136/military-2023-002435</a></li>
-          <li>Coppack RJ, Ladlow P, Cassidy RP, et al. Academic Department of Military Rehabilitation (ADMR): avoiding the pitfalls of ‘the Walker Dip.’ <em>BMJ Mil Health.</em> 2024;170(1):4–8. <a href="https://doi.org/10.1136/military-2023-002469">doi:10.1136/military-2023-002469</a></li>
-          <li>Stern CA, Stockinger ZT, Todd WE, Gurney JM. An Analysis of Orthopedic Surgical Procedures Performed During U.S. Combat Operations from 2002 to 2016. <em>Mil Med.</em> 2019;184(11–12):813–819. <a href="https://doi.org/10.1093/milmed/usz093">doi:10.1093/milmed/usz093</a></li>
-          <li>Osborn PM, Tansey KA. Ascertaining the Readiness of Military Orthopedic Surgeons: A Revision to the Knowledge, Skills, and Abilities Methodology. <em>Mil Med.</em> 2023;188(7–8):1351–1355. <a href="https://doi.org/10.1093/milmed/usac135">doi:10.1093/milmed/usac135</a></li>
-          <li>Holt DB, Hueman MT, Jaffin J, et al. Clinical Readiness Program: Refocusing the Military Health System. <em>Mil Med.</em> 2021;186(Supplement_1):32–39. <a href="https://doi.org/10.1093/milmed/usaa385">doi:10.1093/milmed/usaa385</a></li>
-          <li>Jensen G, Van Egmond T, Örtenwall P, et al. Military civilian partnerships: International proposals for bridging the Walker Dip. <em>J Trauma Acute Care Surg.</em> 2020;89(2S):S4–S7. <a href="https://doi.org/10.1097/TA.0000000000002785">doi:10.1097/TA.0000000000002785</a></li>
-        </ol><p class="disclaimer">The views expressed are those of the authors and do not reflect official policy or position of Brooke Army Medical Center, the Army, Air Force, Defense Health Agency, or Department of Defense.</p></section>
-      </div>
+<main class="poster" aria-label="Poster: Treatment of Civilian Upper Extremity Trauma Patients at a Military Level One Trauma Center">
+  <header class="banner" aria-label="Poster title and authors">
+    <img class="logo-dha" src="assets/defense-health-agency.png" alt="Defense Health Agency seal">
+    <h1 class="title">Treatment of Civilian Upper Extremity Trauma Patients at a Military Level<br>One Trauma Center: Avoiding the “Walker Dip”</h1>
+    <div class="byline">
+      <p class="authors">CPT Raymond V. Spaulding, MD, MC, USA<sup>1</sup>; &nbsp;Capt Manuela Gaviria, MD, MS, MC, USAF<sup>2</sup>; Maj Casey M Sabbag, MD, MS, MC, USAF<sup>2</sup></p>
+      <p class="affil"><sup>1</sup>296th BSB, 1-2 SBCT, 7th Infantry Division, Joint Base Lewis-McChord, WA<br><sup>2</sup>Department of Orthopaedic Surgery, Brooke Army Medical Center, Fort Sam Houston, TX, USA</p>
     </div>
-  </main>
-  <footer><div class="wrap">Study period: 2014–2025 · Brooke Army Medical Center · Source: supplied poster draft</div></footer>
-  <script>
-    const years=['14–15','15–16','16–17','17–18','18–19','19–20','20–21','21–22','22–23','23–24','24–25'];
-    const totals=[711,673,483,422,597,667,959,711,840,613,388],average=[225,245,232,211,217,267,281,190,265,272,212];
-    const ksa=[42556.5,46339.3,43880.48,39908.54,41043.38,50500.38,53148.34,35936.6,50122.1,51446.08,40097.68];
-    function axisText(x,y,text,anchor='end'){return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="Arial,sans-serif" font-size="10" fill="#65748a">${text}</text>`}
-    function renderVolume(){const w=540,h=210,left=42,right=8,top=9,bottom=35,ph=h-top-bottom,pw=w-left-right,max=1000,group=pw/years.length,bw=Math.min(12,group*.3),parts=[];for(let v=0;v<=1000;v+=250){const y=top+ph-(v/max)*ph;parts.push(`<line x1="${left}" y1="${y}" x2="${w-right}" y2="${y}" stroke="#e4e9f0"/>${axisText(left-7,y+3,v)}`)}years.forEach((yr,i)=>{const x=left+i*group+group/2,b1=average[i]/max*ph,b2=totals[i]/max*ph;parts.push(`<rect x="${x-bw-1}" y="${top+ph-b1}" width="${bw}" height="${b1}" rx="1" fill="#ef462e"><title>${yr}: ${average[i]} average cases per surgeon</title></rect><rect x="${x+1}" y="${top+ph-b2}" width="${bw}" height="${b2}" rx="1" fill="#3c6fb0"><title>${yr}: ${totals[i]} total cases</title></rect>${axisText(x,top+ph+15,yr,'middle')}`)});document.getElementById('volume-chart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${parts.join('')}</svg>`}
-    function renderKsa(){const w=540,h=190,left=48,right=8,top=9,bottom=31,ph=h-top-bottom,pw=w-left-right,max=60000,group=pw/years.length,bw=Math.min(23,group*.56),parts=[];for(let v=0;v<=60000;v+=20000){const y=top+ph-(v/max)*ph;parts.push(`<line x1="${left}" y1="${y}" x2="${w-right}" y2="${y}" stroke="#e4e9f0"/>${axisText(left-7,y+3,v===0?'0':`${v/1000}k`)}`)}const by=top+ph-35000/max*ph;parts.push(`<line x1="${left}" y1="${by}" x2="${w-right}" y2="${by}" stroke="#ef462e" stroke-width="2"/>`);ksa.forEach((value,i)=>{const x=left+i*group+group/2,bh=value/max*ph;parts.push(`<rect x="${x-bw/2}" y="${top+ph-bh}" width="${bw}" height="${bh}" rx="2" fill="#3c6fb0"><title>${years[i]}: ${Math.round(value).toLocaleString()} KSA points</title></rect>${axisText(x,top+ph+14,years[i],'middle')}`)});document.getElementById('ksa-chart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${parts.join('')}</svg>`}
-    renderVolume();renderKsa();
-  </script>
+    <img class="logo-crest" src="assets/dedication-duty-service.jpeg" alt="Dedication Duty Service crest">
+  </header>
+  <h2 class="band band-bg"><span>BACKGROUND/INTRODUC<br>TION</span></h2>
+  <h2 class="band band-results"><span>RESUL<br>TS</span></h2>
+  <h2 class="band band-discussion"><span>DISCUSS<br>ION</span></h2>
+  <section class="copy intro" aria-label="Background and introduction"><ul>
+    <li>The United States military has reached unprecedented survival rates during recent conflicts, largely due to the surgical expertise developed in managing complex combat injuries.</li>
+    <li>During peacetime, this expertise often declines due to a significant drop in case volume and complexity, a phenomenon known as <strong>The Walker Dip.</strong></li>
+    <li>With the possibility of near-pear conflicts, maintaining the operational readiness of military surgeons is now more critical than ever.</li>
+    <li>Upper extremity orthopedic trauma plays a significant role in combat care, accounting for nearly 10% of all combat related procedures in recent conflicts.</li>
+    <li>We set out to evaluate <strong>Brooke Army Medical Center’s</strong> ability to maintain the surgical readiness of their upper extremity surgeons and avoid the Walker Dip, given its unique role as the Department of Defense’s only level 1 trauma center.</li>
+    <li><strong>The Knowledge, Skills, and Abilities (KSA) metric</strong> was utilized to provide an objective readiness score that prioritizes high acuity cases and volume to determine a surgeon’s deployment preparedness.</li>
+    <li>We also explore potential systems—such as expanded military-civilian partnerships and trauma center integration, to safeguard against the Walker Dip and ensure surgeons remain deployment-ready.</li>
+  </ul></section>
+  <h2 class="band band-methods"><span>METHOD<br>S</span></h2>
+  <section class="copy methods" aria-label="Methods"><ul>
+    <li>Analyzed surgical case logs of Brooke Army Medical Center’s upper extremity orthopedic surgeons from 2014-2025.</li>
+    <li>To account for staffing fluctuations (from deployments, retirements, and PCS turnover), individual monthly case volumes were extrapolated to standardized 12-month case volumes.</li>
+    <li>Applied the Knowledge, Skills, and Abilities (KSA) metric using a case mix of 10% tier one and 90% tier four cases. This case mix was chosen as a conservative estimate for annual KSA scores per upper extremity surgeon.</li>
+    <li>The scores were compared against the 35,000 point deployment readiness benchmark.</li>
+  </ul></section>
+  <section class="copy ksa" aria-label="Revised KSA scoring system"><p>Revised Knowledge, Skills, and Abilities (KSA) scoring system:</p>
+    <p>Tier 1 (average KSA score of 436): open debridements, open treatment of fractures, amputations, fasciotomies, external fixation</p>
+    <p>Tier 2 (average KSA score of 373): soft tissue, hand, spine, and foot procedures; arthroplasties and major tumor resection</p>
+    <p>Tier 3 (KSA score of 235): arthroscopy</p>
+    <p>Tier 4 (average KSA score of 161): closed treatment of fractures, hardware removal, other procedures not included above</p>
+  </section>
+  <div id="volume-chart" class="chart chart-volume" role="img" aria-label="BAMC annual upper extremity procedure data: total and average cases per surgeon"></div>
+  <div id="ksa-chart" class="chart chart-ksa" role="img" aria-label="BAMC annual KSA score per upper extremity surgeon; red line marks 35,000 points"></div>
+  <section class="copy discuss-top" aria-label="Results discussion"><ul>
+    <li>During the period from 2014 to 2025, BAMC upper extremity surgeons performed 7706 cases, with this data serving as evidence that <strong>BAMC likely far exceeds the KSA deployment readiness benchmark for their upper extremity surgeons</strong> every year during this period.</li>
+    <li>Given the highly conservative estimate of 10% tier 1 and 90% tier 4 cases, BAMC’s high acuity, high volume case load likely places their surgeons far above the 35,000 KSA benchmark.</li>
+    <li>These findings highlight the <strong>critical role that high-acuity trauma exposure plays in preserving surgical capability to avoid the Walker Dip.</strong></li>
+  </ul></section>
+  <h3 class="strategic-title">Strategic Imperative: Expand Access to Trauma Exposure</h3>
+  <section class="copy discuss-body" aria-label="Strategic imperative"><ul>
+    <li>Many, if not most other medical treatment facilities (MTFs) may not achieve this level of acuity and volume and therefore could be falling short of this readiness benchmark.</li>
+    <li>Preventing the <strong>Walker Dip is a strategic necessity, not just a clinical concern.</strong> As we prepare for the next conflict, we cannot afford to re-learn hard lessons at the cost of service members’ lives.</li>
+    <li>Transformation of more MTFs into level one trauma centers is likely not feasible.</li>
+    <li>A more immediate and readily scalable solution lies in embedding military orthopedic surgeons in civilian level one trauma centers either as permanent assignments or targeted pre-deployment rotations.</li>
+    <li>The U.S. military has initiated similar collaborations, but administrative hurdles remain. Overcoming these hurdles to expand upon military-civilian trauma integration must be a DoD priority to preserve the surgical skills of our surgeons.</li>
+  </ul></section>
+  <h2 class="band band-refs">References/Disclaimer</h2>
+  <section class="copy references" aria-label="References">
+    <p>1. Knudson MM. A Perfect Storm: 2019 Scudder Oration on Trauma. J Am Coll Surg. 2020;230(3):269-282. doi:10.1016/j.jamcollsurg.2019.11.009</p>
+    <p>2. Hodgetts TJ, Naumann D, Bowley D. Transferable military medical lessons from the Russo-Ukraine war. BMJ Mil Health. 2025;171(2):101-104. doi:10.1136/military-2023-002435</p>
+    <p>3. Coppack RJ, Ladlow P, Cassidy RP, et al. Academic Department of Military Rehabilitation (ADMR): avoiding the pitfalls of ‘ the Walker Dip .’ BMJ Mil Health. 2024;170(1):4-8. doi:10.1136/military-2023-002469</p>
+    <p>4. Stern CA, Stockinger ZT, Todd WE, Gurney JM. An Analysis of Orthopedic Surgical Procedures Performed During U.S. Combat Operations from 2002 to 2016. Mil Med. 2019;184(11-12):813-819. doi:10.1093/milmed/usz093</p>
+    <p>5. Osborn PM, Tansey KA. Ascertaining the Readiness of Military Orthopedic Surgeons: A Revision to the Knowledge, Skills, and Abilities Methodology. Mil Med. 2023;188(7-8):1351-1355. doi:10.1093/milmed/usac135</p>
+    <p>6. Holt DB, Hueman MT, Jaffin J, et al. Clinical Readiness Program: Refocusing the Military Health System. Mil Med. 2021;186(Supplement_1):32-39. doi:10.1093/milmed/usaa385</p>
+    <p>7. Jensen G, Van Egmond T, Örtenwall P, Peralta R, Aboutanos MB, Galante J. Military civilian partnerships: International proposals for bridging the Walker Dip. J Trauma Acute Care Surg. 2020;89(2S):S4-S7. doi:10.1097/TA.0000000000002785</p>
+  </section>
+  <p class="disclaimer">The views expressed herein are those of the author(s) and do not reflect the official policy or position of Brooke Army Medical Center, the Department of the Army, the Department of the Air Force, the Defense Health Agency, or the Department of Defense.</p>
+</main>
+<script>
+const years=['2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021','2021-2022','2022-2023','2023-2024','2024-2025'];
+const total=[711,673,483,422,597,667,959,711,840,613,388],avg=[225,245,232,211,217,267,281,190,265,272,212];
+const ksa=[42556.5,46339.3,43880.48,39908.54,41043.38,50500.38,53148.34,35936.6,50122.1,51446.08,40097.68];
+function label(x,y,t,a='end'){return `<text x="${x}" y="${y}" text-anchor="${a}" font-family="Arial,sans-serif" font-size="10" fill="#595959">${t}</text>`}
+function volume(){const w=900,h=420,l=54,r=16,t=34,b=58,ph=h-t-b,pw=w-l-r,max=1000,g=pw/11,bw=16,s=['<rect x="1" y="1" width="898" height="418" fill="#fff" stroke="#eee"/>',`<text x="450" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#595959">BAMC Annual Upper Extremity Procedure Data</text>`];for(let v=0;v<=800;v+=200){const y=t+ph-v/max*ph;s.push(`<line x1="${l}" y1="${y}" x2="${w-r}" y2="${y}" stroke="#d9d9d9"/>${label(l-8,y+3,v)}`)}s.push(`<line x1="${l}" y1="${t}" x2="${l}" y2="${t+ph}" stroke="#595959"/><line x1="${l}" y1="${t+ph}" x2="${w-r}" y2="${t+ph}" stroke="#595959"/>`);years.forEach((yr,i)=>{const x=l+i*g+g/2,a=avg[i]/max*ph,z=total[i]/max*ph;s.push(`<rect x="${x-bw-1}" y="${t+ph-a}" width="${bw}" height="${a}" fill="#F62400"/><rect x="${x+1}" y="${t+ph-z}" width="${bw}" height="${z}" fill="#3D6AA7"/>${label(x,t+ph+17,yr,'middle')}`)});s.push(`<rect x="205" y="390" width="12" height="12" fill="#F62400"/>${label(222,400,'Average Number of Cases Performed Per Surgeon','start')}<rect x="575" y="390" width="12" height="12" fill="#3D6AA7"/>${label(592,400,'Total Number of Cases Performed','start')}`);document.getElementById('volume-chart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${s.join('')}</svg>`}
+function ksaChart(){const w=900,h=466,l=64,r=16,t=34,b=50,ph=h-t-b,pw=w-l-r,max=60000,g=pw/11,bw=25,s=['<rect x="1" y="1" width="898" height="464" fill="#fff" stroke="#eee"/>',`<text x="450" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#595959">BAMC Annual KSA Scores Per Upper Extremity Surgeon</text>`];for(let v=0;v<=60000;v+=20000){const y=t+ph-v/max*ph;s.push(`<line x1="${l}" y1="${y}" x2="${w-r}" y2="${y}" stroke="#d9d9d9"/>${label(l-8,y+3,v.toLocaleString())}`)}const by=t+ph-35000/max*ph;s.push(`<line x1="${l}" y1="${by}" x2="${w-r}" y2="${by}" stroke="#F62400" stroke-width="2"/><line x1="${l}" y1="${t}" x2="${l}" y2="${t+ph}" stroke="#595959"/><line x1="${l}" y1="${t+ph}" x2="${w-r}" y2="${t+ph}" stroke="#595959"/>`);ksa.forEach((v,i)=>{const x=l+i*g+g/2,bh=v/max*ph;s.push(`<rect x="${x-bw/2}" y="${t+ph-bh}" width="${bw}" height="${bh}" fill="#3D6AA7"/>${label(x,t+ph+17,years[i],'middle')}`)});s.push(`<rect x="344" y="438" width="12" height="12" fill="#3D6AA7"/>${label(362,448,'Annual KSA score per surgeon','start')}`);document.getElementById('ksa-chart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${s.join('')}</svg>`}
+volume();ksaChart();
+</script>
 </body>
 </html>
