@@ -8,7 +8,7 @@
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:#fff;color:#111}
-body{font-family:"Times New Roman",Times,serif}
+body{font-family:Arial,Helvetica,sans-serif}
 .reader-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:7px 12px;background:#fff;border-bottom:1px solid #d8dce3;font:13px/1.2 Arial,Helvetica,sans-serif;color:#26364d}
 .reader-bar button{min-width:36px;min-height:32px;border:1px solid #b9c2cf;border-radius:3px;background:#fff;color:#183d72;font:700 16px/1 Arial,Helvetica,sans-serif;cursor:pointer}
 .reader-bar button:hover{background:#edf2f9}.reader-bar button:focus-visible{outline:3px solid #f4c84a;outline-offset:1px}.zoom-value{min-width:48px;text-align:center;font-weight:700}
@@ -17,25 +17,25 @@ body{font-family:"Times New Roman",Times,serif}
 .banner{position:static;height:auto;background:none;color:white}.banner::before{content:"";position:absolute;inset:0 0 auto;height:15.9091%;background:#2f5496}
 .logo-dha{position:absolute;left:2.6422%;top:.8318%;width:6.8667%;height:14.0455%;object-fit:contain}
 .logo-crest{position:absolute;left:91.5022%;top:0;width:6.2156%;height:15.9091%;object-fit:fill;background:white}
-.title{position:absolute;left:24.9156%;top:1.7364%;width:50.1711%;height:7.8045%;display:flex;align-items:flex-start;justify-content:center;text-align:center;font-size:1.4815cqw;font-weight:bold;line-height:1.02;color:#fff}
+.title{position:absolute;left:24.9156%;top:1.7364%;width:50.1711%;height:7.8045%;display:flex;align-items:flex-start;justify-content:center;text-align:center;font:700 1.4815cqw/1.02 Georgia,"Times New Roman",serif;color:#fff}
 .byline{position:absolute;left:29%;top:10.4045%;width:42.0156%;height:5.05%;text-align:center;color:#fff;font-size:.7407cqw;line-height:1.02}
 .authors{margin:0 0 .12cqw}.affil{margin:0;font-size:.5556cqw;line-height:1.05}
-.band{position:absolute;margin:0;background:#2f5496;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.6173cqw;font-weight:bold;line-height:1.05}
+.band{position:absolute;margin:0;padding:0 .25em;background:#2f5496;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:.679cqw;font-weight:bold;line-height:1.05;letter-spacing:.025em}
 .band-bg{left:2.2222%;top:18.1818%;width:31.1111%;height:4.5455%}
 .band-results{left:35%;top:18.1818%;width:30%;height:4.5455%}
 .band-discussion{left:66.6667%;top:18.1818%;width:31.1111%;height:4.5455%}
 .band-methods{left:2.2222%;top:69.9545%;width:31.1111%;height:4.5455%}
 .band-refs{left:66.6889%;top:75.2273%;width:31.1111%;height:4.5455%}
-.copy{position:absolute;margin:0;padding:0;font-size:.6173cqw;line-height:1.22;font-weight:normal;color:#111;text-align:left;word-break:normal;overflow-wrap:normal;hyphens:none}
-.copy ul{margin:0;padding-left:1.15em}.copy li{padding-left:.08em;margin:0 0 .24em}.copy p{margin:0 0 .26em}.intro{left:2.2222%;top:22.8182%;width:31.1111%;height:47.0455%}
+.copy{position:absolute;margin:0;padding:0;font-size:.679cqw;line-height:1.28;font-weight:normal;color:#172437;text-align:left;word-break:normal;overflow-wrap:normal;hyphens:none}
+.copy ul{margin:0;padding-left:1.22em}.copy li{padding-left:.12em;margin:0 0 .25em}.copy li::marker{color:#2f5496}.copy p{margin:0 0 .28em}.copy strong{font-weight:700;color:#142d52}.intro{left:2.2222%;top:22.8182%;width:31.1111%;height:47.0455%}
 .methods{left:2.2222%;top:74.3182%;width:31.1111%;height:25.6818%}
-.ksa{left:35.0667%;top:22.9545%;width:29.9333%;height:25%;font-size:.6173cqw;line-height:1.34}
-.discuss-top{left:66.7333%;top:22.6818%;width:31.0444%;height:19.4091%;font-size:.7407cqw;line-height:1.28}
-.strategic-title{position:absolute;left:66.6667%;top:41.7273%;width:31.0444%;height:2.8636%;margin:0;text-align:center;font-size:.7407cqw;font-weight:bold;line-height:1.05}
-.discuss-body{left:66.7556%;top:44.7273%;width:31.0444%;height:30.4091%;font-size:.7407cqw;line-height:1.27}
-.references{left:66.5778%;top:80.3636%;width:31.3556%;height:19.6364%;font-size:.4938cqw;line-height:1.22}
+.ksa{left:35.0667%;top:22.9545%;width:29.9333%;height:25%;font-size:.679cqw;line-height:1.28}
+.discuss-top{left:66.7333%;top:22.6818%;width:31.0444%;height:19.4091%;font-size:.679cqw;line-height:1.25}
+.strategic-title{position:absolute;left:66.6667%;top:41.7273%;width:31.0444%;height:2.8636%;margin:0;text-align:center;font:700 .679cqw/1.05 Arial,Helvetica,sans-serif;color:#142d52}
+.discuss-body{left:66.7556%;top:44.7273%;width:31.0444%;height:30.4091%;font-size:.679cqw;line-height:1.25}
+.references{left:66.5778%;top:80.3636%;width:31.3556%;height:19.6364%;font-size:.4938cqw;line-height:1.25;color:#26364d}
 .references p{margin:0 0 .10em}
-.disclaimer{position:absolute;left:66.7556%;top:97.0909%;width:31.1778%;height:2.9091%;font-size:.4938cqw;line-height:1.18;text-align:center;margin:0}
+.disclaimer{position:absolute;left:66.7556%;top:97.0909%;width:31.1778%;height:2.9091%;font-size:.4938cqw;line-height:1.2;text-align:center;margin:0;color:#526276}
 .chart{position:absolute;background:#fff}
 .chart-volume{left:37%;top:45.2273%;width:25.9778%;height:26.1818%}
 .chart-ksa{left:36.7333%;top:71.3182%;width:26.5111%;height:28.1364%}
