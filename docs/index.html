@@ -9,6 +9,10 @@
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:#fff;color:#111}
 body{font-family:"Times New Roman",Times,serif}
+.reader-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:7px 12px;background:#fff;border-bottom:1px solid #d8dce3;font:13px/1.2 Arial,Helvetica,sans-serif;color:#26364d}
+.reader-bar button{min-width:36px;min-height:32px;border:1px solid #b9c2cf;border-radius:3px;background:#fff;color:#183d72;font:700 16px/1 Arial,Helvetica,sans-serif;cursor:pointer}
+.reader-bar button:hover{background:#edf2f9}.reader-bar button:focus-visible{outline:3px solid #f4c84a;outline-offset:1px}.zoom-value{min-width:48px;text-align:center;font-weight:700}
+.stage{width:100%;overflow:auto;overscroll-behavior:contain}
 .poster{position:relative;container-type:inline-size;width:min(100vw,45in);aspect-ratio:45/22;margin:0 auto;background:#fff;overflow:hidden;color:#111}
 .banner{position:static;height:auto;background:none;color:white}.banner::before{content:"";position:absolute;inset:0 0 auto;height:15.9091%;background:#2f5496}
 .logo-dha{position:absolute;left:2.6422%;top:.8318%;width:6.8667%;height:14.0455%;object-fit:contain}
@@ -22,8 +26,7 @@ body{font-family:"Times New Roman",Times,serif}
 .band-discussion{left:66.6667%;top:18.1818%;width:31.1111%;height:4.5455%}
 .band-methods{left:2.2222%;top:69.9545%;width:31.1111%;height:4.5455%}
 .band-refs{left:66.6889%;top:75.2273%;width:31.1111%;height:4.5455%}
-.band-bg span{width:31.73%;}.band-discussion span{width:13.62%}.band-results span{width:10.23%}.band-methods span{width:12.75%}
-.copy{position:absolute;margin:0;padding:0;font-size:.6173cqw;line-height:1.19;font-weight:normal;color:#111}
+.copy{position:absolute;margin:0;padding:0;font-size:.6173cqw;line-height:1.22;font-weight:normal;color:#111;text-align:left;word-break:normal;overflow-wrap:normal;hyphens:none}
 .copy ul{margin:0;padding-left:1.15em}.copy li{padding-left:.08em;margin:0 0 .24em}.copy p{margin:0 0 .26em}.intro{left:2.2222%;top:22.8182%;width:31.1111%;height:47.0455%}
 .methods{left:2.2222%;top:74.3182%;width:31.1111%;height:25.6818%}
 .ksa{left:35.0667%;top:22.9545%;width:29.9333%;height:25%;font-size:.6173cqw;line-height:1.34}
@@ -38,11 +41,18 @@ body{font-family:"Times New Roman",Times,serif}
 .chart-ksa{left:36.7333%;top:71.3182%;width:26.5111%;height:28.1364%}
 .chart svg{display:block;width:100%;height:100%}
 @page{size:45in 22in;margin:0}
-@media print{html,body{width:45in;height:22in;margin:0;padding:0;overflow:hidden}.poster{width:45in;height:22in;max-width:none;aspect-ratio:auto;margin:0;overflow:hidden;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media print{html,body{width:45in;height:22in;margin:0;padding:0;overflow:hidden}.reader-bar{display:none}.stage{width:45in;height:22in;overflow:visible}.poster{width:45in!important;height:22in;max-width:none;aspect-ratio:auto;margin:0;overflow:hidden;print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 @media screen and (max-width:520px){.poster{width:100vw}}
 </style>
 </head>
 <body>
+<div class="reader-bar" role="toolbar" aria-label="Poster zoom controls">
+  <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+  <span class="zoom-value" id="zoom-value" aria-live="polite">100%</span>
+  <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+  <button type="button" id="zoom-reset" aria-label="Reset zoom">Fit</button>
+</div>
+<div class="stage">
 <main class="poster" aria-label="Poster: Treatment of Civilian Upper Extremity Trauma Patients at a Military Level One Trauma Center">
   <header class="banner" aria-label="Poster title and authors">
     <img class="logo-dha" src="assets/defense-health-agency.png" alt="Defense Health Agency seal">
@@ -53,9 +63,9 @@ body{font-family:"Times New Roman",Times,serif}
     </div>
     <img class="logo-crest" src="assets/dedication-duty-service.jpeg" alt="Dedication Duty Service crest">
   </header>
-  <h2 class="band band-bg"><span>BACKGROUND/INTRODUC<br>TION</span></h2>
-  <h2 class="band band-results"><span>RESUL<br>TS</span></h2>
-  <h2 class="band band-discussion"><span>DISCUSS<br>ION</span></h2>
+  <h2 class="band band-bg">BACKGROUND/INTRODUCTION</h2>
+  <h2 class="band band-results">RESULTS</h2>
+  <h2 class="band band-discussion">DISCUSSION</h2>
   <section class="copy intro" aria-label="Background and introduction"><ul>
     <li>The United States military has reached unprecedented survival rates during recent conflicts, largely due to the surgical expertise developed in managing complex combat injuries.</li>
     <li>During peacetime, this expertise often declines due to a significant drop in case volume and complexity, a phenomenon known as <strong>The Walker Dip.</strong></li>
@@ -65,7 +75,7 @@ body{font-family:"Times New Roman",Times,serif}
     <li><strong>The Knowledge, Skills, and Abilities (KSA) metric</strong> was utilized to provide an objective readiness score that prioritizes high acuity cases and volume to determine a surgeon’s deployment preparedness.</li>
     <li>We also explore potential systems—such as expanded military-civilian partnerships and trauma center integration, to safeguard against the Walker Dip and ensure surgeons remain deployment-ready.</li>
   </ul></section>
-  <h2 class="band band-methods"><span>METHOD<br>S</span></h2>
+  <h2 class="band band-methods">METHODS</h2>
   <section class="copy methods" aria-label="Methods"><ul>
     <li>Analyzed surgical case logs of Brooke Army Medical Center’s upper extremity orthopedic surgeons from 2014-2025.</li>
     <li>To account for staffing fluctuations (from deployments, retirements, and PCS turnover), individual monthly case volumes were extrapolated to standardized 12-month case volumes.</li>
@@ -105,6 +115,7 @@ body{font-family:"Times New Roman",Times,serif}
   </section>
   <p class="disclaimer">The views expressed herein are those of the author(s) and do not reflect the official policy or position of Brooke Army Medical Center, the Department of the Army, the Department of the Air Force, the Defense Health Agency, or the Department of Defense.</p>
 </main>
+</div>
 <script>
 const years=['2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020','2020-2021','2021-2022','2022-2023','2023-2024','2024-2025'];
 const total=[711,673,483,422,597,667,959,711,840,613,388],avg=[225,245,232,211,217,267,281,190,265,272,212];
@@ -113,6 +124,13 @@ function label(x,y,t,a='end'){return `<text x="${x}" y="${y}" text-anchor="${a}"
 function volume(){const w=900,h=420,l=54,r=16,t=34,b=58,ph=h-t-b,pw=w-l-r,max=1000,g=pw/11,bw=16,s=['<rect x="1" y="1" width="898" height="418" fill="#fff" stroke="#eee"/>',`<text x="450" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#595959">BAMC Annual Upper Extremity Procedure Data</text>`];for(let v=0;v<=800;v+=200){const y=t+ph-v/max*ph;s.push(`<line x1="${l}" y1="${y}" x2="${w-r}" y2="${y}" stroke="#d9d9d9"/>${label(l-8,y+3,v)}`)}s.push(`<line x1="${l}" y1="${t}" x2="${l}" y2="${t+ph}" stroke="#595959"/><line x1="${l}" y1="${t+ph}" x2="${w-r}" y2="${t+ph}" stroke="#595959"/>`);years.forEach((yr,i)=>{const x=l+i*g+g/2,a=avg[i]/max*ph,z=total[i]/max*ph;s.push(`<rect x="${x-bw-1}" y="${t+ph-a}" width="${bw}" height="${a}" fill="#F62400"/><rect x="${x+1}" y="${t+ph-z}" width="${bw}" height="${z}" fill="#3D6AA7"/>${label(x,t+ph+17,yr,'middle')}`)});s.push(`<rect x="205" y="390" width="12" height="12" fill="#F62400"/>${label(222,400,'Average Number of Cases Performed Per Surgeon','start')}<rect x="575" y="390" width="12" height="12" fill="#3D6AA7"/>${label(592,400,'Total Number of Cases Performed','start')}`);document.getElementById('volume-chart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${s.join('')}</svg>`}
 function ksaChart(){const w=900,h=466,l=64,r=16,t=34,b=50,ph=h-t-b,pw=w-l-r,max=60000,g=pw/11,bw=25,s=['<rect x="1" y="1" width="898" height="464" fill="#fff" stroke="#eee"/>',`<text x="450" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#595959">BAMC Annual KSA Scores Per Upper Extremity Surgeon</text>`];for(let v=0;v<=60000;v+=20000){const y=t+ph-v/max*ph;s.push(`<line x1="${l}" y1="${y}" x2="${w-r}" y2="${y}" stroke="#d9d9d9"/>${label(l-8,y+3,v.toLocaleString())}`)}const by=t+ph-35000/max*ph;s.push(`<line x1="${l}" y1="${by}" x2="${w-r}" y2="${by}" stroke="#F62400" stroke-width="2"/><line x1="${l}" y1="${t}" x2="${l}" y2="${t+ph}" stroke="#595959"/><line x1="${l}" y1="${t+ph}" x2="${w-r}" y2="${t+ph}" stroke="#595959"/>`);ksa.forEach((v,i)=>{const x=l+i*g+g/2,bh=v/max*ph;s.push(`<rect x="${x-bw/2}" y="${t+ph-bh}" width="${bw}" height="${bh}" fill="#3D6AA7"/>${label(x,t+ph+17,years[i],'middle')}`)});s.push(`<rect x="344" y="438" width="12" height="12" fill="#3D6AA7"/>${label(362,448,'Annual KSA score per surgeon','start')}`);document.getElementById('ksa-chart').innerHTML=`<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${s.join('')}</svg>`}
 volume();ksaChart();
+let zoomScale=1;
+const poster=document.querySelector('.poster'),zoomLabel=document.getElementById('zoom-value');
+function applyZoom(){const posterWidth=Math.min(window.innerWidth*zoomScale,45*96);poster.style.width=`${posterWidth}px`;zoomLabel.textContent=`${Math.round(zoomScale*100)}%`}
+document.getElementById('zoom-in').addEventListener('click',()=>{zoomScale=Math.min(2,zoomScale+.25);applyZoom()});
+document.getElementById('zoom-out').addEventListener('click',()=>{zoomScale=Math.max(1,zoomScale-.25);applyZoom()});
+document.getElementById('zoom-reset').addEventListener('click',()=>{zoomScale=1;applyZoom()});
+window.addEventListener('resize',applyZoom);applyZoom();
 </script>
 </body>
 </html>
